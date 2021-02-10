@@ -61,13 +61,13 @@ This will deploy an instance of the crewlink-server. You can get the URL of your
 Run the server with [Docker](https://docs.docker.com/get-docker/) by running the following command:
 
 ```
-docker run -d -p 9736:9736 ottomated/crewlink-server:latest
+docker run -d -p 9736:9736 --env ADDRESS=example.com ottomated/crewlink-server:latest
 ```
 
 To change the external port the server uses, change the *first* instance of the port. For example, to use port 8123:
 
 ```
-docker run -d -p 8123:9736 ottomated/crewlink-server:latest
+docker run -d -p 8123:9736 --env ADDRESS=example.com ottomated/crewlink-server:latest
 ```
 
 ### Building the Docker Image
